@@ -1,0 +1,127 @@
+{
+ "deck": {
+  "mode": "SINGLE",
+  "audience": "IOWNを初めて知る社内外の関係者",
+  "decision": "IOWNが何を、いつまでに実現する構想かをつかむ",
+  "fidelity": "strict",
+  "source_kind": "prose",
+  "reproduction": "restructure",
+  "art_direction": "階段一枚で、光の適用範囲が下から積み増さる様子と3つの目標値を同時に見せる",
+  "structure_type": "as_is",
+  "governing_thought": "IOWNの光電融合はチップ内へ、2032年に電力効率100倍",
+  "target_slides": 1,
+  "slide_count_includes_cover": false,
+  "chapters": [],
+  "hypothesis": {
+   "provisional_answer": "IOWNは通信ネットワーク（APN）の構想である",
+   "disconfirming": [
+    {
+     "finding": "素材p.37で、光電融合の適用はボード間・パッケージ間・ダイ間のコンピューティングへ広がる",
+     "evidence_ids": [
+      "E04"
+     ],
+     "verdict": "rejected"
+    }
+   ],
+   "adopted_because": "ネットワークは1段目で、残る3段はコンピューティングの段であることを素材が示す",
+   "residual_risk": "2025年以降の段と数値は目標であり、時期が後ろへずれる可能性"
+  }
+ },
+ "evidence": [
+  {
+   "id": "E01",
+   "class": "F",
+   "statement": "エンドエンド遅延1/200は、IOWN 1.0（2023年）で目標値へ到達",
+   "value": "1/200",
+   "unit": "倍",
+   "period": "2023年",
+   "certainty": "actual",
+   "source": "素材p.34「出所：NTT（2026年）を基に作成」"
+  },
+  {
+   "id": "E02",
+   "class": "F",
+   "statement": "伝送容量125倍（光ファイバ1本あたり）は、IOWN 3.0（2028年）の目標",
+   "value": 125,
+   "unit": "倍",
+   "period": "2028年",
+   "certainty": "target",
+   "source": "素材p.34「出所：NTT（2026年）を基に作成」"
+  },
+  {
+   "id": "E03",
+   "class": "F",
+   "statement": "電力効率100倍（フォトニクス適用部分全体）は、IOWN 4.0（2032年）の目標",
+   "value": 100,
+   "unit": "倍",
+   "period": "2032年",
+   "certainty": "target",
+   "source": "素材p.34「出所：NTT（2026年）を基に作成」"
+  },
+  {
+   "id": "E04",
+   "class": "F",
+   "statement": "光電融合デバイスの適用はDC間・サーバ間（2023年）からボード間（2025年）、パッケージ間（2028年〜）、ダイ間（2032年〜）へ",
+   "certainty": "target",
+   "period": "2023〜2032年",
+   "source": "素材p.37「出所：NTT（2026年）を基に作成」"
+  }
+ ],
+ "slides": [
+  {
+   "id": "S01",
+   "role": "analysis",
+   "title": "IOWNは光電融合をDC間からチップ内へ",
+   "title_mode": "issue",
+   "title_class": "change",
+   "claim": "IOWNは光電融合の適用範囲をネットワークからコンピューティングへ広げ、段階ごとに3つの目標値へ到達する構想である",
+   "head": [
+    "光の適用範囲をネットワークからチップ内へ広げ、2032年に電力効率100倍をめざす"
+   ],
+   "figure_items": [
+    "ネットワークからコンピューティングへ",
+    "ネットワーク",
+    "コンピューティング",
+    "DC間・サーバ間の接続",
+    "ボード間の接続",
+    "パッケージ間の接続",
+    "ダイ間の接続",
+    "遅延1/200",
+    "容量125倍",
+    "電力効率100倍"
+   ],
+   "logic_shape": "expansion",
+   "archetype": "V",
+   "layout": "stair",
+   "sketch": "上端に赤い矢印帯、左にレーン札2枚、右へずれながら積み増す4段と右端の目標チップ",
+   "evidence_ids": [
+    "E01",
+    "E02",
+    "E03",
+    "E04"
+   ],
+   "certainty": "target",
+   "counter": "2025年以降の段と2028年・2032年の数値はいずれも目標で、実績ではない",
+   "char_budget": 220,
+   "source": "出所：NTT（2026年）を基に作成",
+   "footnotes": [
+    "いずれも目標値。遅延は同一県内の非圧縮映像、容量は光ファイバ1本、電力効率はフォトニクス適用部分全体が対象"
+   ],
+   "title_candidates": [
+    {
+     "class": "change",
+     "text": "IOWNは光電融合をDC間からチップ内へ"
+    },
+    {
+     "class": "structure",
+     "text": "IOWNを支える光電融合の4段階"
+    },
+    {
+     "class": "decision",
+     "text": "IOWNの3目標は2023年から2032年に到達"
+    }
+   ],
+   "adopted_reason": "主張は領域の積み増し（expansion）で、変化の類がV型の階段と合う"
+  }
+ ]
+}
